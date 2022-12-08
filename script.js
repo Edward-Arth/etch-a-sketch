@@ -38,13 +38,14 @@ refreshBtn.style.backgroundColor = 'beige';
 refreshBtn.addEventListener('click', () => {
   wipe();
   let newCanvasStr = prompt('Enter canvas length/width between 1-100');
-  let newCanvasNum = Number(newCanvasStr);
-  let newDimensions = (100 / newCanvasNum + '%');
-  if (isNaN(newCanvasNum) || newCanvasNum > 100 || newCanvasNum < 1) {
+  let newCanvasNum1 = Number(newCanvasStr);
+  let newCanvasNum2 = Math.round(newCanvasNum1)
+  let newDimensions = (100 / newCanvasNum2 + '%');
+  if (isNaN(newCanvasNum2) || newCanvasNum2 > 100 || newCanvasNum2 < 1) {
     alert('Input must be a number between 1-100');
   }
   else {
-    for (let i = 0; i < (newCanvasNum * newCanvasNum); i++) {
+    for (let i = 0; i < (newCanvasNum2 * newCanvasNum2); i++) {
       let box = document.createElement('box');
       box.classList.add('boxes');
       container.appendChild(box);
