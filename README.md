@@ -1,1 +1,1 @@
-# etch-a-sketch
+In this project, I made an etch-a-sketch grid with Javascript.
